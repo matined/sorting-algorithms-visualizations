@@ -74,25 +74,14 @@ def sort():
         canvas.itemconfig(Post.posts[i].p, fill=POST_COLOR, outline=POST_COLOR)
         canvas.itemconfig(Post.posts[index].p,
                           fill=POST_COLOR, outline=POST_COLOR)
-
-
-def finish():
-    for i in range(0, 3):
-        for i in Post.posts:
-            canvas.itemconfig(i.p, fill="white", outline="white")
-        window.update()
-        time.sleep(0.01)
-        for i in Post.posts:
-            canvas.itemconfig(i.p, fill=POST_COLOR, outline=POST_COLOR)
-        window.update()
-        time.sleep(0.01)
+    for i in Post.posts:
+        canvas.itemconfig(i.p, fill="white", outline="white")
 
 
 def main():
     create_window()
     place_posts()
     sort()
-    finish()
     window.mainloop()
 
 
